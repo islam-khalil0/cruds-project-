@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+</head>
+<body>
+
+
+    <div class="baseContiner">
+ 
+        <div class="continer">
+           
+            <!-- <i class="ri-moon-line"></i> -->
+            <div class="title">
+                <h1>CRUDS PROJECT</h1>
+                <p>product management system</p>
+
+            </div>
+
+            <i class="bi bi-brightness-high-fill edit" style="position: relative; left: 700px; top: -80px; font-size: 25px; cursor: pointer;"></i>          
+
+    
+            <div class="input">
+                <input type="text" placeholder="title" id="title">
+    
+                <div class="inputCalc">
+                    <input type="text" placeholder="price" id="price"  onkeyup="totlaOfNumber();"  style="width: 20%; margin: 0 0;">
+                    <input type="text" placeholder="taxes" id="taxes" onkeyup="totlaOfNumber();"  style="width: 20%; margin: 0 5px;">
+                    <input type="text" placeholder="ads" id="ads"  onkeyup="totlaOfNumber();" style="width: 20%; margin: 0 5px;">
+                    <input type="text" placeholder="discount" id="discount"  onkeyup="totlaOfNumber();" style="width: 20%; margin: 0 5px;">
+                    <div class="totle"></div>
+                </div>
+    
+                <div class="coul">
+                    <input type="count" placeholder="count" id="count">
+                    <input type="catagory" placeholder="category" id="catagory">
+        
+                    <button id="create" >Create</button>
+        
+                    <input onkeyup="searchData(this.value)" type="text" placeholder="search used title" id="search">
+                </div>
+                
+    
+                <div class="moodOfSearch">
+                    <button onclick="getSearchMood(this.id)" id="byTitle" >search by title</button>
+                    <button onclick="getSearchMood(this.id)" id="byCatego">search by category</button>    
+                </div>
+    
+                <div class="daleteAll">
+                    <button onclick="deleteAll()" id="deleteAllBtn" style="background-color: rgb(219, 23, 23);">Delete All</button>
+                </div>
+            
+    
+            </div>
+    
+    
+    
+            <div class="output">
+                <table>
+                    <tr class="tHead">
+                        <td>id</td>
+                        <td>title</td>
+                        <td>price</td>
+                        <td>taxes</td>
+                        <td>ads</td>
+                        <td>discount</td>
+                        <td>totle</td>
+                        <td>category</td>
+                        <td>update</td>
+                        <td>delete</td>
+                    </tr>
+    
+                    <tbody class="table" id="tTable">
+                       
+                       
+                    </tbody>
+    
+                </table>
+            </div>
+    
+    
+    
+    
+    
+        </div>
+    
+    </div>
+   
+
+
+
+
+
+    <script src='main.js'></script>
+
+</body>
+</html>
